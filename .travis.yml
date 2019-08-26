@@ -1,0 +1,30 @@
+{
+  "os": "linux",
+  "dist": "bionic",
+  "cache": {
+    "directories": [
+      "$HOME/.pub-cache"
+    ]
+  },
+  "group": "stable",
+  "addons": {
+    "apt": {
+      "packages": [
+        "lib32stdc++6"
+      ]
+    }
+  },
+  "script": [
+    "flutter packages get",
+    "flutter analyze --no-pub --no-current-package lib/ test/",
+    "flutter test --no-pub test/"
+  ],
+  ".result": "configured",
+  "install": [
+    "git clone https://github.com/flutter/flutter.git -b stable --depth 1",
+    "export PATH=./flutter/bin:$PATH",
+    "flutter doctor",
+    "flutter --version"
+  ],
+  "language": "dart"
+}
