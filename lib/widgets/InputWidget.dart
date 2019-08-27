@@ -14,6 +14,7 @@ class InputWidget extends StatelessWidget {
               child: IconButton(
                 icon: Icon(Icons.face),
                 color: Palette.primaryColor,
+                onPressed: (){},
               ),
             ),
             color: Colors.white,
